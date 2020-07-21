@@ -10,9 +10,7 @@ class Immutable(type):
         raise Exception("You can't modify immutable object")
 
 
-class UUIDS(object):
-
-    __metaclass__ = Immutable
+class UUIDS(object, metaclass=Immutable):
 
     BASE = "0000%s-0000-1000-8000-00805f9b34fb"
 
@@ -51,9 +49,7 @@ class UUIDS(object):
     CHARACTERISTIC_DFU_FIRMWARE = "00001531-0000-3512-2118-0009af100700"
     CHARACTERISTIC_DFU_FIRMWARE_WRITE = "00001532-0000-3512-2118-0009af100700"
 
-class AUTH_STATES(object):
-
-    __metaclass__ = Immutable
+class AUTH_STATES(object, metaclass=Immutable):
 
     AUTH_OK = "Auth ok"
     AUTH_FAILED = "Auth failed"
@@ -62,17 +58,13 @@ class AUTH_STATES(object):
     REQUEST_RN_ERROR = "Something went wrong when requesting the random number"
 
 
-class ALERT_TYPES(object):
-
-    __metaclass__ = Immutable
+class ALERT_TYPES(object, metaclass=Immutable):
 
     NONE = '\x00'
     MESSAGE = '\x01'
     PHONE = '\x02'
 
-class QUEUE_TYPES(object):
-
-    __metaclass__ = Immutable
+class QUEUE_TYPES(object, metaclass=Immutable):
 
     HEART = 'heart'
     RAW_ACCEL = 'raw_accel'
