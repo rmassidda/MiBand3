@@ -56,5 +56,9 @@ sudo service bluetooth restart
 ```
 
 ## Attribution
-Base lib provided by Leo Soares
-Additional debug & fixes was made by Volodymyr Shymanskyy
+This work is based on the efforts of numerous devs:
+
+- [leojrfs/miband2](https://github.com/leojrfs/miband2)
+- [vshymanskyy/miband2-python-test](https://github.com/vshymanskyy/miband2-python-test)
+- [creotiv/MiBand2](https://github.com/creotiv/MiBand2)
+- [yogeshojha/MiBand3](https://github.com/yogeshojha/MiBand3)
