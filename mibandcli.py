@@ -10,13 +10,15 @@ commands = ['init', 'time', 'info', 'steps', 'battery', 'hearth']
 parser = argparse.ArgumentParser(description='CLI to interact with Mi Band 3 wrist band')
 parser.add_argument('--mac',help='MAC address of the band',required=True)
 parser.add_argument('cmd',help='Operation required',choices=commands,nargs=1)
+parser.add_argument('--silent',help='Avoid additional informations regarding BLE communication',action='store_false')
 args = parser.parse_args()
 
 mac = args.mac
 cmd = args.cmd[0]
+dbg = args.silent
 
 # Instance of MiBand3
-band = MiBand3(mac, debug=True)
+band = MiBand3(mac, debug=dbg)
 band.setSecurityLevel(level = "medium")
 
 # Initialize or authenticate
